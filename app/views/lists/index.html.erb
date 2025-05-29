@@ -1,0 +1,15 @@
+<div class="body">
+  <div class="container">
+    <h1>All lists</h1>
+    <hr>
+    <% @lists.each do |list| %>
+      <div class="m-3 font-weight-bold">
+        <i class="fa-regular fa-file $green"></i> <%= list.name %>
+        <%= link_to "More", list_path(list), class: "btn btn-primary btn-sm" %></p>
+        <hr>
+      </div>
+    <% end %>
+
+    <%= link_to "Create new list", new_list_path, class: "btn btn-primary" %>
+  </div>
+</div>

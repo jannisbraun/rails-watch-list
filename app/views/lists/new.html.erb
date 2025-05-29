@@ -1,0 +1,15 @@
+<div class="body">
+  <div class="container">
+    <h1>Add a new list</h1>
+
+    <%= simple_form_for(@list) do |f| %>
+      <div class="form-inputs">
+        <%= f.input :name %>
+      </div>
+
+      <div class="form-actions">
+        <%= f.button :submit, class: "btn btn-primary" %>
+      </div>
+    <% end %>
+  </div>
+</div>
