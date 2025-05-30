@@ -1,7 +1,15 @@
-
 <div class="body">
   <div class="container">
-    <h1><%= @list.name %></h1>
+    <div class="header d-flex align-items-center py-3">
+      <div>
+        <% if @list.photo.attached? %>
+          <%= cl_image_tag @list.photo.key, width: 100, crop: :fill, class: "rounded-5", style: "box-shadow: 10px 10px 20px grey" %>
+        <% end %>
+      </div>
+      <div class="px-3">
+        <h1><%= @list.name %></h1>
+      </div>
+    </div>
     <hr>
     <div class="movies d-flex justify-content-between">
       <% @list.bookmarks.each do |bookmark| %>
