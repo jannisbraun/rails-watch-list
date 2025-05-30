@@ -4,7 +4,7 @@
     <hr>
     <% @lists.each do |list| %>
       <div class="m-3 font-weight-bold">
-        <i class="fa-regular fa-file $green"></i> <%= list.name %>
+        <i class="fa-regular fa-file"></i> <%= list.name %>
         <%= link_to "More", list_path(list), class: "btn btn-primary btn-sm" %></p>
         <hr>
       </div>
